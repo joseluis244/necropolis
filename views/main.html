@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Main</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <style>
+    .lista{
+        padding: 10px;
+        max-width: 1000px;
+        margin: auto;
+    }
+    .cabeza-drawer{
+        padding: 10px;
+        background-color: lightgrey;
+        height: 13rem;
+    }
+    .busqueda-fechas{
+        padding: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+
+
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout__title">Necropolis</span>
+                <div class="mdl-layout-spacer"></div>
+                <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
+                    <i class="material-icons">more_vert</i>
+                </button>
+                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
+                    <li class="mdl-menu__item" onclick="console.log('prueba de click')">Ajustes</li>
+                </ul>
+            </div>
+        </header>
+
+
+        <div class="mdl-layout__drawer">
+            <div class="cabeza-drawer">
+                <span class="mdl-layout-title">Necropolis</span>
+            </div>
+            <div class="busqueda-fechas">
+                Inicio... <br>
+                <input type="date"> <br>
+                Final <br>
+                <input type="date">
+            </div>
+        </div>
+
+
+
+        <main class="mdl-layout__content">
+            <div class="lista">
+                <div class="buscador" style="width: 100%"><input type="text" placeholder="Buscar" style="width: 100%; height: 30px; font-size: 16px;"></div>
+                <ul class="mdl-list">
+                    <li class="mdl-list__item mdl-list__item--two-line" style="background-color: #ececec; margin-bottom: 10px;" onclick="console.log('prueba de click 2')">
+                        <span class="mdl-list__item-primary-content">
+                            <i class="material-icons mdl-list__item-avatar">person</i>
+                            <span>Nombre</span>
+                            <span class="mdl-list__item-sub-title">Fecha</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+    </div>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
+</html>
