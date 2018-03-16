@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Visor</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <style>
+        .cabeza-drawer{
+            padding: 10px;
+            background-color: lightgrey;
+            height: 13rem;
+        }
+        .contenedor{
+            padding: 10px;
+            max-width: 900px;
+        }
+        li{
+            background-color: lightgray;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <i class="material-icons" style="font-size: 35px;">keyboard_arrow_left</i>
+                <span class="mdl-layout__title">
+                    Necropolis
+                </span>
+                <div class="mdl-layout-spacer"></div>
+                <div class="informe">
+                    <i class="material-icons" onclick="abririnforme()">description</i>
+                </div>
+            </div>
+        </header>
+
+        <div class="mdl-layout__drawer">
+            <div class="cabeza-drawer">
+                <span class="mdl-layout-title">Necropolis</span>
+                <div style="text-align: center; margin-top: 10px;">
+                    <div style="background-color: white; margin: auto; height: 75px; width: 75px; border-radius: 36px;">
+                        <div style="font-size: 40px; padding-top: 28px;">MR</div>
+                    </div>
+                    <div>Resonancia Magnetica</div>
+                    <div>Nombre paciente</div>
+                </div>
+            </div>
+            <div class="Datos">
+                <strong>description:</strong><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia maxime non commodi fugit, aut vitae iste debitis quod blanditiis qui numquam ducimus cumque reiciendis perferendis minus ullam impedit laborum suscipit?
+            </div>
+        </div>
+
+        <main class="mdl-layout__content">
+            <div class="mdl-grid mdl-grid--no-spacing">
+                <div class="mdl-cell mdl-cell--12-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+                    <div style="padding: 10px;">
+                        <ul class="mdl-list">
+                            <li class="mdl-list__item" onclick="webview('2ac1316d-3e432022-62eabff2-c59f5475-9b1ac3f8')">visor D</li>
+                            <li class="mdl-list__item" onclick="webview('4baa97c7-d53d3d82-a5eb9403-17ef5a77-4e0efb55')">visor D</li>
+                            <li class="mdl-list__item" onclick="webview('dc0216d2-a406a5ad-31ef7a78-113ae9d9-29939f9e')">visor D</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="mdl-cell mdl-cell--12-col mdl-cell--hide-desktop">
+                    <div style="padding: 10px;">
+                        <ul class="mdl-list">
+                            <li class="mdl-list__item">visor M</li>
+                            <li class="mdl-list__item">visor M</li>
+                            <li class="mdl-list__item">visor M</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script>
+        function abririnforme(){
+            window.open("http://heim.ifi.uio.no/~oleha/Publications/iris23_patient.pdf","_blank")
+        }
+        function webview(iden){
+            window.open("http://demo.orthanc-server.com/web-viewer/app/viewer.html?series="+iden,"_blank")
+        }
+    </script>
+</body>
+</html>
