@@ -1,0 +1,94 @@
+input{
+    width: 95%;
+    border: none;
+    border-bottom: 1px solid var(--color-primario);
+    font-size: 15px;
+}
+main ul{
+    list-style: none;
+    padding-left: 10px;
+}
+main ul .est_leido{
+    border-left-color: var(--color-primario)
+}
+main ul li{
+    border-bottom: 1px solid #cccccc;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    cursor: pointer;
+    border-left: 2px solid var(--color-atencion);
+    margin-bottom: 2px;
+}
+main ul li .nombre{
+    display: grid;
+    grid-template-columns: 300px auto;
+}
+main{
+    box-sizing: border-box;
+    padding: 10px;
+    overflow-y: auto;
+}
+.drawer .modalidades{
+    height: 150px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #cccccc;
+    display: inline-block;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+.drawer .mod_sel {
+    display: inline-flex;
+    background-color: var(--color-secundario);
+    height: 40px;
+    width: 100px;
+    margin-bottom: 5px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.drawer .seleccion{
+    background-color: var(--color-atencion);
+    color: var(--color-texto1);
+}
+.drawer .fechas{
+    height: 160px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #cccccc;
+}
+.drawer .fechas .titulo{
+    margin-top: 15px;
+}
+.drawer .fechas .btn_buscar{
+    margin-top: 15px;
+}
+.drawer .fechas .btn_buscar button{
+    width: 95%;
+    background: var(--color-primario);
+    color: var(--color-texto1);
+    border: none;
+    border-radius: 2px;
+    height: 35px;
+}
+.drawer .fechas > div{
+    display: flex;
+    justify-content: center;
+}
+main .list_cont {
+    display: grid;
+    grid-template-columns: auto 30px;
+    grid-template-rows: 22px 15px;
+    width: 100%;
+}
+main .list_cont .mod {
+    grid-area: 1/2/3/3;
+    display: flex;
+    align-items: center;
+}
+main .list_cont .fecha {
+    font-size: 12px;
+    color: gray;
+}

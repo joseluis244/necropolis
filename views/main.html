@@ -4,131 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Main</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <style>
-
-    .lista{
-        padding: 10px;
-        max-width: 1000px;
-        margin: auto;
-    }
-    .cabeza-drawer{
-        padding: 10px;
-        background-color: lightgrey;
-        height: 13rem;
-    }
-    .busqueda-fechas{
-        padding: 10px;
-        display: none;
-    }
-    .mod-id-ico{
-        background-color: white;
-        width: 50px;
-        height: 50px;
-        border-radius: 25px;
-        margin-right: 10px;
-    }
-    .mod-id-text{
-        text-align: center;
-        font-size: 25px;
-        padding-top: 13px;
-        padding-left: 1px;
-        font-weight: bold;
-    }
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/general.css">
+    <link rel="stylesheet" href="./CSS/main.css">
+    <title>main</title>
 </head>
 <body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-
-
-        <header class="mdl-layout__header">
-            <div class="mdl-layout__header-row">
-                <span class="mdl-layout__title">Necropolis</span>
-                <div class="mdl-layout-spacer"></div>
-                <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
-                    <i class="material-icons">more_vert</i>
-                </button>
-                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
-                    <li class="mdl-menu__item" onclick="console.log('prueba de click')">Ajustes</li>
-                    <li class="mdl-menu__item" onclick="console.log('prueba de click')">Cerra secion</li>
-                </ul>
+    <header>
+        <span class="titulo">Titulo</span>
+    </header>
+    <div class="drawer">
+        <section class="modalidades">
+            <div class="mod_sel seleccion" onclick="selec(this)">CR</div>
+            <div class="mod_sel seleccion" onclick="selec(this)">DX</div>
+            <div class="mod_sel seleccion" onclick="selec(this)">US</div>
+            <div class="mod_sel seleccion" onclick="selec(this)">CT</div>
+            <div class="mod_sel seleccion" onclick="selec(this)">MR</div>
+        </section>
+        <section class="fechas">
+            <div class="titulo">
+                Deste
             </div>
-        </header>
-
-
-        <div class="mdl-layout__drawer">
-            <div class="cabeza-drawer">
-                <span class="mdl-layout-title">Necropolis</span>
+            <div>
+                <input type="date">
             </div>
-            <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="#">Hoy</a>
-                <a class="mdl-navigation__link" onclick="verfechas()">Fechas</a>
-            </nav>
-            <div class="busqueda-fechas">
-                Inicio... <br>
-                <input type="date"> <br>
-                Final <br>
-                <input type="date"><br>
-                <button class="mdl-button mdl-js-button">
-                    Buscar
-                </button>
+            <div class="titulo">
+                Hasta
             </div>
-        </div>
-
-
-
-        <main class="mdl-layout__content">
-            <div class="lista">
-
-
-                <div class="buscador" style="width: 100%"><input type="text" placeholder="Buscar" style="width: 100%; height: 30px; font-size: 16px;"></div>
-                <ul class="mdl-list" style="padding-top: 35px;">
-
-                    <li class="mdl-list__item mdl-list__item--two-line" style="background-color: #ececec; margin-bottom: 10px;" onclick="document.location.href='./series.html'">
-                        <div class="mod-id-ico">
-                           <div class="mod-id-text">CT</div> 
-                        </div>
-                        
-                        <span class="mdl-list__item-primary-content">
-                            <span>Nombre</span>
-                            <span class="mdl-list__item-sub-title">Fecha</span>
-                        </span>
-
-                        <div class="informe">
-                            <i class="material-icons" onclick="abririnforme()">description</i>
-                        </div>
-
-                    </li>
-
-                    <li class="mdl-list__item mdl-list__item--two-line" style="background-color: #ececec; margin-bottom: 10px;" onclick="document.location.href='./series.html'">
-                        <div class="mod-id-ico">
-                           <div class="mod-id-text">CR</div> 
-                        </div>
-                        
-                        <span class="mdl-list__item-primary-content">
-                            <span>Nombre</span>
-                            <span class="mdl-list__item-sub-title">Fecha</span>
-                        </span>
-                    </li>
-
-                </ul>
-
-
+            <div>
+                <input type="date">
             </div>
-        </main>
-
+            <div class="btn_buscar">
+                <button>Buscar</button>
+            </div>
+        </section>
     </div>
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script>
-        function verfechas(){
-            $(".busqueda-fechas").toggle();
-        }
-        function abririnforme(){
-            window.open("http://heim.ifi.uio.no/~oleha/Publications/iris23_patient.pdf","_blank")
-        }
-    </script>
+    <main>
+        <ul>
+            <li class="est_leido">
+                <div class="list_cont">
+                    <div class="nombre">
+                        <span class="P_nombre">Jose Luis Camacho Moreno</span>
+                        <span>Sexo: M</span>
+                    </div>
+                    <div class="mod">CT</div>
+                    <div class="fecha">14/09/2018</div>
+                </div>
+            </li>
+            <li>
+                <div class="list_cont">
+                    <div class="nombre">
+                        <span class="P_nombre">juan pereda</span>
+                        <span>Sexo: M</span>
+                    </div>
+                    <div class="mod">CR</div>
+                    <div class="fecha">14/09/2018</div>
+                </div>
+            </li>
+            <li>
+                <div class="list_cont">
+                    <div class="nombre">
+                        <span class="P_nombre">juan pereda</span>
+                        <span>Sexo: M</span>
+                    </div>
+                    <div class="mod">DX</div>
+                    <div class="fecha">14/09/2018</div>
+                </div>
+            </li>
+            <li>
+                <div class="list_cont">
+                    <div class="nombre">
+                        <span class="P_nombre">Alejandro Miguel Balderrama Hurtado</span>
+                        <span>Sexo: M</span>
+                    </div>
+                    <div class="mod">MR</div>
+                    <div class="fecha">14/09/2018</div>
+                </div>
+            </li>
+            <li>
+                <div class="list_cont">
+                    <div class="nombre">
+                        <span class="P_nombre">juan pereda</span>
+                        <span>Sexo: M</span>
+                    </div>
+                    <div class="mod">US</div>
+                    <div class="fecha">14/09/2018</div>
+                </div>
+            </li>
+        </ul>
+    </main>
+    <script src="./JS/main.js"></script>
 </body>
 </html>
